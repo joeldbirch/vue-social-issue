@@ -73,6 +73,19 @@
 window.Vue = __webpack_require__(3);
 window.VueSocial = __webpack_require__(1);
 
+Vue.use(window.VueSocial, {
+
+  // this is the name for the callback fired
+  // when the login popup is redirected to the callback URL
+  callbackName: 'handleSocialAuthResponse',
+
+  // This defines the width/height of the share/login popup
+  popup: {
+    width: 800,
+    height: 600
+  }
+});
+
 Vue.social.auth = {
   google: 'http://127.0.0.1:8000/auth/google'
 };
